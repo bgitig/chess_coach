@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(pip install *)",
+      "Bash(uvicorn app.main:app --reload --port 8000)",
+      "Bash(echo \"Backend PID: $!\")",
+      "Bash(npm run *)",
+      "Bash(echo \"Frontend PID: $!\")",
+      "Bash(pkill -f \"uvicorn app.main:app\")",
+      "Bash(echo \"Started PID: $!\")",
+      "Bash(curl -s http://localhost:8000/docs)",
+      "Bash(python *)",
+      "Bash(/c/projects/chess_tutor/backend/engines/stockfish.exe)",
+      "Bash(curl -s http://localhost:8000/health)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -X POST http://localhost:8000/api/games/sync -H 'Content-Type: application/json' -d '{\"username\":\"bentzigitig\",\"months\":1}')",
+      "Bash(curl -s -X POST http://localhost:8000/api/games/sync -H \"Content-Type: application/json\" -d '{\"username\":\"bentzigitig\",\"months\":1}')",
+      "Bash(curl -s \"https://api.chess.com/pub/player/bentzigitig\" -A \"ChessTutorApp/1.0\")",
+      "Bash(curl -s \"https://api.chess.com/pub/player/bgitig/games/archives\" -A \"ChessTutorApp/1.0\")",
+      "Bash(curl -s \"https://api.chess.com/pub/player/bgitig/games/2026/05\" -A \"ChessTutorApp/1.0\")",
+      "Bash(curl -s -X POST http://localhost:8000/api/games/sync -H 'Content-Type: application/json' -d '{\"username\":\"bgitig\",\"months\":1}')",
+      "Bash(netstat -anp)",
+      "PowerShell(Get-NetTCPConnection *)",
+      "PowerShell(netstat *)",
+      "PowerShell(Get-Process *)",
+      "Bash(curl -s http://localhost:8000/api/health)",
+      "Bash(curl -s \"http://localhost:8000/api/analysis/status/6ffa02dc-de8d-45a2-bb8d-61a1cf1d5995\")",
+      "Bash(curl -s http://localhost:8000/api/analysis/test-stockfish)"
+    ]
+  }
+}
