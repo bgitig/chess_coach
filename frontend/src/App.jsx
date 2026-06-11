@@ -12,8 +12,12 @@ export default function App() {
     localStorage.setItem("chess_username", u);
   };
 
+  // BASE_URL is '/' in dev and '/chess_tutor/' on GitHub Pages (set by vite base config).
+  // BrowserRouter needs it so links like '/games' resolve correctly under the sub-path.
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <div className="min-h-screen bg-gray-950 text-gray-100">
         {/* Header */}
         <header className="bg-gray-900 border-b border-gray-800 px-6 py-4">

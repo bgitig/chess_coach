@@ -1,7 +1,9 @@
 import axios from "axios";
 
+// In dev, VITE_API_URL is unset and Vite proxies /api → localhost:8000.
+// In production (GitHub Pages), VITE_API_URL is set to the Render backend URL.
 const api = axios.create({
-  baseURL: "/api",
+  baseURL: import.meta.env.VITE_API_URL ?? "/api",
   timeout: 30000,
   headers: { "Content-Type": "application/json" },
 });
