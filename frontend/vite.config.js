@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: mode === "production" ? "/chess_tutor/" : "/",
+  base: mode === "production" ? "/chess_coach/" : "/",
   server: {
     proxy: {
       "/api": {
