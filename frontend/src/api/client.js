@@ -13,11 +13,8 @@ export const createUser = (username) =>
   api.post("/users", { chess_com_username: username }).then((r) => r.data);
 
 // --- Games ---
-export const syncGames = (username, months = 3, testMode = false) =>
-  api.post("/games/sync", { username, months, test_mode: testMode }).then((r) => r.data);
-
-export const runTestAnalysis = (username) =>
-  api.post("/analysis/run-test", null, { params: { username } }).then((r) => r.data);
+export const syncGames = (username, months = 3) =>
+  api.post("/games/sync", { username, months }).then((r) => r.data);
 
 export const getGames = (username, page = 1, perPage = 20) =>
   api
