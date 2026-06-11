@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Database
+backend/chess_tutor.db
+backend/*.db
+
+# Stockfish binary (too large for git; download separately — see backend/engines/README.md)
+backend/engines/stockfish.exe
+backend/engines/*.exe
+backend/engines/stockfish
+backend/engines/stockfish-*
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Environment / secrets
+.env
+.env.*
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
